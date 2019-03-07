@@ -1,6 +1,7 @@
 package guru.springframework.services;
 
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 public class PrimaryGreetingService implements GreetingService {
 
     @Override
+    @Qualifier("greetingServiceImpl")
     public String sayGreetings() {
         return "Hello - primary Greeting service";
     }

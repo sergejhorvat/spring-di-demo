@@ -20,10 +20,16 @@ public class DiDemoApplication {
         System.out.println("\n"+"Calling from myController.hello()");
         controller.hello();
 
+
+        System.out.println("\n"+"Calling from MyController");
+        System.out.println(controller.hello());
+
         System.out.println("\n"+"Calling from PropertyInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+
         System.out.println("\n"+"Calling from SetterInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+
         System.out.println("\n"+"Calling from ConstructorInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 
