@@ -6,4 +6,5 @@ public class GetterGreetingService implements GreetingService{
     public String sayGreetings(){
         return "Hello - I was injected by the getter!!!";
     }
+
 }
