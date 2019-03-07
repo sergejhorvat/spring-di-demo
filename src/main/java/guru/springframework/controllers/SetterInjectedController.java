@@ -2,6 +2,7 @@ package guru.springframework.controllers;
 
 import guru.springframework.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 
@@ -16,7 +17,7 @@ public class SetterInjectedController {
     }
 
     @Autowired // works with out it it wires it with a constructor
-    public SetterInjectedController(GreetingService greetingService) {
+    public SetterInjectedController(@Qualifier("getterGreetingService")GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 }

@@ -7,6 +7,6 @@ public class ConstructorGreetingService implements GreetingService {
 
     @Override
     public String sayGreetings(){
-        return " Hello - I was injected via a constructor!!!";
+        return "Hello - I was injected via a constructor!!!";
     }
 }
