@@ -17,11 +17,14 @@ public class DiDemoApplication {
 
         MyController controller = (MyController) ctx.getBean("myController");
 
+        System.out.println("\n"+"Calling from myController.hello()");
         controller.hello();
 
-
+        System.out.println("\n"+"Calling from PropertyInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println("\n"+"Calling from SetterInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+        System.out.println("\n"+"Calling from ConstructorInjectedController.class).sayHello()");
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 
     }
