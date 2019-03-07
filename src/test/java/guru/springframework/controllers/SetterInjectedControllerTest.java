@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+
 public class SetterInjectedControllerTest {
 
     private SetterInjectedController setterInjectedController;
@@ -13,7 +14,7 @@ public class SetterInjectedControllerTest {
     @Before
     public void setUp() throws Exception {
         this.setterInjectedController = new SetterInjectedController();
-        this.setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        this.setterInjectedController.SetGreetingService(new GreetingServiceImpl());
     }
 
     @Test
@@ -21,3 +22,4 @@ public class SetterInjectedControllerTest {
         assertEquals(GreetingServiceImpl.HELLO_GURUS, setterInjectedController.sayHello());
     }
 }
+

@@ -8,8 +8,6 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class SetterInjectedController {
-
-
     private GreetingService greetingService;
 
     public String sayHello(){
@@ -17,8 +15,10 @@ public class SetterInjectedController {
     }
 
     @Autowired // works with out it it wires it with a constructor
-    public SetterInjectedController(@Qualifier("getterGreetingService")GreetingService greetingService) {
+    public void SetGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
+
+
 }
 

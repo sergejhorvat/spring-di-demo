@@ -22,3 +22,4 @@ public class PropertyInjectedControllerTest {
         assertEquals(GreetingServiceImpl.HELLO_GURUS, propertyInjectedController.sayHello());
     }
 }
+
