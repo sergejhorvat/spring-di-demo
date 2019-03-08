@@ -7,13 +7,12 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Primary  // If there is more than one Bean use this one
-@Profile("en")
-public class PrimaryGreetingService implements GreetingService {
+@Profile("es")
+@Primary
+public class PrimarySpanishGreetingService implements GreetingService {
 
     @Override
-    @Qualifier("greetingServiceImpl")
     public String sayGreetings() {
-        return "Hello - primary Greeting service";
+        return "Servicio da Saludo Primario";
     }
 }
