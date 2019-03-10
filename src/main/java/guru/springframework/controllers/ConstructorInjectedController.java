@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 public class ConstructorInjectedController {
     private GreetingService greetingService;
 
-    //@Autowired // no need to is't autowireing constructor based components
+    //@Autowired // no need to is't autowired by constructor based components
     public ConstructorInjectedController(@Qualifier("constructorGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
